@@ -1052,7 +1052,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu/1",
+									"raw": "localhost:8080/pep/restaurant/bff/api/menu/0",
 									"host": [
 										"localhost"
 									],
@@ -1063,7 +1063,7 @@
 										"bff",
 										"api",
 										"menu",
-										"1"
+										"0"
 									]
 								}
 							},
@@ -1086,7 +1086,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"French\"\r\n}",
+									"raw": "{\r\n    \"language\": \"Portuguese\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1360,14 +1360,7 @@
 							"name": "Get All Restaurants",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -1398,14 +1391,7 @@
 							"name": "Get Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -1437,20 +1423,13 @@
 							"name": "Post Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Restaurant TEST\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"id\": 2,\r\n        \"language\": \"Portuguese\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant TEST\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"id\": 1,\r\n        \"language\": \"Portuguese\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1478,14 +1457,7 @@
 							"name": "Put Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [],
@@ -1520,14 +1492,7 @@
 							"name": "Delete Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "DELETE",
 								"header": [
@@ -1559,14 +1524,7 @@
 							"name": "Add Employee To Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [
@@ -1605,14 +1563,7 @@
 							"name": "Remove Employee From Restaurant",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [
@@ -1686,14 +1637,7 @@
 							"name": "Get All Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -1724,14 +1668,7 @@
 							"name": "Get Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -1763,14 +1700,7 @@
 							"name": "Post Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -1805,14 +1735,7 @@
 							"name": "Put Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [],
@@ -1847,14 +1770,7 @@
 							"name": "Delete Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "DELETE",
 								"header": [
@@ -1886,14 +1802,7 @@
 							"name": "Add Restaurant to Employee Copy",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [
@@ -1932,14 +1841,7 @@
 							"name": "Remove Restaurant From Employee",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [
@@ -2013,14 +1915,7 @@
 							"name": "Get All Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -2051,14 +1946,7 @@
 							"name": "Get Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -2090,14 +1978,7 @@
 							"name": "Post Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -2131,14 +2012,7 @@
 							"name": "Put Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [],
@@ -2173,14 +2047,7 @@
 							"name": "Delete Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "DELETE",
 								"header": [
@@ -2258,14 +2125,7 @@
 							"name": "Remove Employee to Schedule",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [
@@ -2339,14 +2199,7 @@
 							"name": "Get All Menu",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -2377,14 +2230,7 @@
 							"name": "Get Menu",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [
@@ -2416,20 +2262,13 @@
 							"name": "Post Menu",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"French\"\r\n}",
+									"raw": "{\r\n    \"language\": \"Portuguese\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2457,14 +2296,7 @@
 							"name": "Put Menu",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "PUT",
 								"header": [],
@@ -2499,14 +2331,7 @@
 							"name": "Delete Menu",
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
+									"type": "noauth"
 								},
 								"method": "DELETE",
 								"header": [
@@ -2609,7 +2434,7 @@
 								},
 								{
 									"key": "client_secret",
-									"value": "afb48af0-a6b9-44b7-ba43-328f3e5a6555",
+									"value": "c815a87f-9346-48e6-b063-fd97e091d1db",
 									"type": "text"
 								},
 								{
