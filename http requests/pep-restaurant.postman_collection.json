@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0c9d0e29-36e5-48da-88b8-4d70168b9d0b",
+		"_postman_id": "68a92c58-3274-4f8a-be03-6cdd15bdf781",
 		"name": "pep-restaurant",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -44,6 +44,46 @@
 										"bff",
 										"api",
 										"restaurant"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Restaurants Near The Coordinate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/38.7125378/-9.1381529",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pep",
+										"restaurant",
+										"bff",
+										"api",
+										"restaurant",
+										"38.7125378",
+										"-9.1381529"
 									]
 								}
 							},
@@ -1631,6 +1671,404 @@
 					]
 				},
 				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "Get All Adresses",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/address",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/address/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"address",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Rua Test\",\r\n    \"postal_code\": \"4999-999\",\r\n    \"city\": \"Porto\",\r\n    \"country\": \"Portugal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/address",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"address"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Rua Test novo\",\r\n    \"postal_code\": \"4999-999\",\r\n    \"city\": \"Porto\",\r\n    \"country\": \"Portugal\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/address/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"address",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/address/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"address",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{user_access_token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Location",
+					"item": [
+						{
+							"name": "Get All Locations",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/location",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"location"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Location",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/location/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"location",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Location",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"address\": {\r\n        \"id\": 2,\r\n        \"name\": \"Rua Test\",\r\n        \"postal_code\": \"4999-999\",\r\n        \"city\": \"Porto\",\r\n        \"country\": \"Portugal\"\r\n    },\r\n    \"coordinate\": {\r\n        \"latitude\": 12.131,\r\n        \"longitude\": 8.2131\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/location",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"location"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Put Location",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Francesinhas à Raul\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 2,\r\n    \"menu\": {\r\n        \"id\": 1,\r\n        \"language\": \"Italian\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/location/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"location",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Location",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8082/pep/restaurant/manager/api/location/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"pep",
+										"restaurant",
+										"manager",
+										"api",
+										"location",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{user_access_token}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
 					"name": "Employee",
 					"item": [
 						{
@@ -2434,7 +2872,7 @@
 								},
 								{
 									"key": "client_secret",
-									"value": "c815a87f-9346-48e6-b063-fd97e091d1db",
+									"value": "DxzvD0VHQdZ2vBfy2grYV4gswVMbyYSB",
 									"type": "text"
 								},
 								{
