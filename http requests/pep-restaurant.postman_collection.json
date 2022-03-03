@@ -71,7 +71,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/38.7125378/-9.1381529",
+									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/41.1099091417/-8.621535675",
 									"host": [
 										"localhost"
 									],
@@ -82,8 +82,8 @@
 										"bff",
 										"api",
 										"restaurant",
-										"38.7125378",
-										"-9.1381529"
+										"41.1099091417",
+										"-8.621535675"
 									]
 								}
 							},
@@ -766,7 +766,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu/0",
+									"raw": "localhost:8080/pep/restaurant/bff/api/menu/1",
 									"host": [
 										"localhost"
 									],
@@ -777,7 +777,7 @@
 										"bff",
 										"api",
 										"menu",
-										"0"
+										"1"
 									]
 								}
 							},
@@ -1143,7 +1143,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Restaurant 1\",\r\n    \"capacity\": 10,\r\n    \"menu\": {\r\n        \"id\": 1\r\n    },\r\n    \"location\": {\r\n        \"id\": 2\r\n    },\r\n    \"here_id\": \"here-id-1\",\r\n    \"schedule\": {\r\n        \"scheduleRoutine\":[\r\n            {\r\n                \"MONDAY\": [\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    },\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    }\r\n                ]\r\n            },\r\n            {\r\n                \"TUESDAY\": [\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    },\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    }\r\n                ]\r\n            }\r\n        ]\r\n    }   \r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant 1\",\r\n    \"capacity\": 10,\r\n    \"menu\": {\r\n        \"id\": 1\r\n    },\r\n    \"location\": {\r\n        \"id\": 1\r\n    },\r\n    \"here_id\": \"here-id-1\",\r\n    \"schedule\": {\r\n        \"scheduleRoutine\":\r\n            {\r\n                \"MONDAY\": [\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    },\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    }\r\n                ],\r\n                \"TUESDAY\": [\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    },\r\n                    {\r\n                        \"startTime\": \"12:30\",\r\n                        \"endTime\": \"15:30\"\r\n                    }\r\n                ]\r\n            }\r\n        \r\n    }   \r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1217,7 +1217,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/2",
+									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/3",
 									"host": [
 										"localhost"
 									],
@@ -1228,7 +1228,7 @@
 										"manager",
 										"api",
 										"restaurant",
-										"2"
+										"3"
 									]
 								}
 							},
@@ -1592,7 +1592,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/location/4",
+									"raw": "localhost:8082/pep/restaurant/manager/api/location/1",
 									"host": [
 										"localhost"
 									],
@@ -1603,7 +1603,7 @@
 										"manager",
 										"api",
 										"location",
-										"4"
+										"1"
 									]
 								}
 							},
@@ -1619,7 +1619,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"address\": {\r\n        \"id\": 3\r\n    },\r\n    \"coordinate\": {\r\n        \"latitude\": 99.131,\r\n        \"longitude\": 99.2131\r\n    }\r\n}",
+									"raw": "{\r\n    \"address\": {\r\n        \"id\": 1\r\n    },\r\n    \"coordinate\": {\r\n        \"latitude\": 99.131,\r\n        \"longitude\": 99.2131\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2096,7 +2096,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"Turkish\"\r\n}",
+									"raw": "{\r\n    \"language\": \"Portuguese\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2314,7 +2314,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://places.ls.hereapi.com/places/v1/discover/here?at=41.1099091417%2C-8.621535675&apiKey=1ej1FNvYZqjc7sb7HgGQd6L4wghicbc1VsITIgUIfwA",
+							"raw": "https://places.ls.hereapi.com/places/v1/discover/here?at=41.1099091417%2C-8.621535675&apiKey=djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8",
 							"protocol": "https",
 							"host": [
 								"places",
@@ -2335,7 +2335,39 @@
 								},
 								{
 									"key": "apiKey",
-									"value": "1ej1FNvYZqjc7sb7HgGQd6L4wghicbc1VsITIgUIfwA"
+									"value": "djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurants near by Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://browse.search.hereapi.com/v1/browse?at=41.1099091417,-8.621535675&apiKey=djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8",
+							"protocol": "https",
+							"host": [
+								"browse",
+								"search",
+								"hereapi",
+								"com"
+							],
+							"path": [
+								"v1",
+								"browse"
+							],
+							"query": [
+								{
+									"key": "at",
+									"value": "41.1099091417,-8.621535675"
+								},
+								{
+									"key": "apiKey",
+									"value": "djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8"
 								}
 							]
 						}
