@@ -1,18 +1,18 @@
 pep-restaurant-ms-manager
 sqp_1fbc06040c0125947bbfd363ff0400f3b9671590
 
-mvn clean verify sonar:sonar ^
-  -Dsonar.projectKey=pep-restaurant-ms-manager ^
-  -Dsonar.host.url=http://localhost:19000 ^
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=pep-restaurant-ms-manager \
+  -Dsonar.host.url=http://localhost:19000 \
   -Dsonar.login=sqp_1fbc06040c0125947bbfd363ff0400f3b9671590
 
 pep-restaurant-ms-bff
 sqp_c6d8529a0cbd88dec8c6d0a11730220c66c686cc
 
-mvn clean verify sonar:sonar ^
-  -Dsonar.projectKey=pep-restaurant-ms-bff ^
-  -Dsonar.host.url=http://localhost:19000 ^
-  -Dsonar.login=sqp_c6d8529a0cbd88dec8c6d0a11730220c66c686cc
+mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=pep-restaurant-ms-bff \
+  -Dsonar.host.url=http://localhost:19000 \
+  -Dsonar.login=sqp_08670f1ee9623f1ef1d2facc4575d21d2c181e2a
 
 ### DONT FORGET TO RUN THAT CMD BEFORE RUNNING CONTAINER###
 wsl -d docker-desktop
