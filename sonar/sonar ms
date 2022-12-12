@@ -7,7 +7,7 @@ mvn clean verify sonar:sonar \
   -Dsonar.login=sqp_1fbc06040c0125947bbfd363ff0400f3b9671590
 
 pep-restaurant-ms-bff
-sqp_c6d8529a0cbd88dec8c6d0a11730220c66c686cc
+sqp_08670f1ee9623f1ef1d2facc4575d21d2c181e2a
 
 mvn clean verify sonar:sonar \
   -Dsonar.projectKey=pep-restaurant-ms-bff \
