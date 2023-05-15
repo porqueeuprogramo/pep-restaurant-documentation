@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0c9d0e29-36e5-48da-88b8-4d70168b9d0b",
+		"_postman_id": "f45442a3-fb82-4e3d-98d4-41b2f81d9d80",
 		"name": "pep-restaurant",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -50,6 +50,46 @@
 							"response": []
 						},
 						{
+							"name": "Get Restaurants Near a Coordinate",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/41.1099091417/-8.621535675",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"pep",
+										"restaurant",
+										"bff",
+										"api",
+										"restaurant",
+										"41.1099091417",
+										"-8.621535675"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get Restaurant",
 							"request": {
 								"auth": {
@@ -71,7 +111,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/2",
+									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/75a06082-98f4-4763-a57c-e1daf2c16fc1",
 									"host": [
 										"localhost"
 									],
@@ -82,7 +122,7 @@
 										"bff",
 										"api",
 										"restaurant",
-										"2"
+										"75a06082-98f4-4763-a57c-e1daf2c16fc1"
 									]
 								}
 							},
@@ -105,7 +145,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Restaurant TEST\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"id\": 2,\r\n        \"language\": \"Portuguese\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant 1\",\r\n    \"hereId\": \"hereId\",\r\n    \"location\": {\r\n        \"address\": {\r\n            \"name\": \"Rua Desce e Sobe\",\r\n            \"postalCode\": \"1000-100\" ,\r\n            \"city\": \"porto\",\r\n            \"country\": \"Portugal\"\r\n        },\r\n        \"locationCoordinate\": {\r\n            \"latitude\": 12.4,\r\n            \"longitude\": 12.3\r\n        }\r\n    },\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"language\": \"English\"\r\n    },\r\n    \"schedule\":{\r\n        \"daysScheduleMap\":{\r\n            \"THURSDAY\":[\r\n                {\r\n                    \"startTime\": \"12:00\",\r\n                    \"endTime\": \"14:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"20:00\",\r\n                    \"endTime\": \"23:00\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -146,7 +186,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Francesinhas à Raul\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 2,\r\n    \"menu\": {\r\n        \"id\": 1,\r\n        \"language\": \"Italian\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant 231111\",\r\n    \"hereId\": \"hereId231111\",\r\n    \"location\": {\r\n        \"address\": {\r\n            \"name\": \"Rua Desce e Sobe231111\",\r\n            \"postalCode\": \"1000-231111\" ,\r\n            \"city\": \"porto231111\",\r\n            \"country\": \"Portugal231111\"\r\n        },\r\n        \"locationCoordinate\": {\r\n            \"latitude\": 12.4231111,\r\n            \"longitude\": 12.3231111\r\n        }\r\n    },\r\n    \"capacity\": 32311111,\r\n    \"menu\": {\r\n        \"language\": \"English2311111\"\r\n    },\r\n    \"schedule\":{\r\n        \"daysScheduleMap\":{\r\n            \"THURSDAY\":[\r\n                {\r\n                    \"startTime\": \"12:00\",\r\n                    \"endTime\": \"14:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"20:00\",\r\n                    \"endTime\": \"23:00\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -154,7 +194,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/1",
+									"raw": "localhost:8080/pep/restaurant/bff/api/restaurant/b08dd951-380d-4ed7-b7f7-3ee5dd156b86",
 									"host": [
 										"localhost"
 									],
@@ -165,7 +205,7 @@
 										"bff",
 										"api",
 										"restaurant",
-										"1"
+										"b08dd951-380d-4ed7-b7f7-3ee5dd156b86"
 									]
 								}
 							},
@@ -193,7 +233,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/2",
+									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/5d24284b-cffb-4e56-ad74-6a4e26475215",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -205,7 +245,7 @@
 										"bff",
 										"api",
 										"restaurant",
-										"2"
+										"5d24284b-cffb-4e56-ad74-6a4e26475215"
 									]
 								}
 							},
@@ -237,7 +277,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/add/employee/1/3",
+									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/add/employee/a8e9bac2-30b0-4ee8-94d5-ccfe8e86fdcc/d690d0e3-584b-49d4-9896-fad34e616ae0",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -251,8 +291,8 @@
 										"restaurant",
 										"add",
 										"employee",
-										"1",
-										"3"
+										"a8e9bac2-30b0-4ee8-94d5-ccfe8e86fdcc",
+										"d690d0e3-584b-49d4-9896-fad34e616ae0"
 									]
 								}
 							},
@@ -284,7 +324,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/remove/employee/5/1",
+									"raw": "http://localhost:8080/pep/restaurant/bff/api/restaurant/remove/employee/75a06082-98f4-4763-a57c-e1daf2c16fc1/37b20eef-9c04-4cbc-946c-8b05a8cd696c",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -298,8 +338,8 @@
 										"restaurant",
 										"remove",
 										"employee",
-										"5",
-										"1"
+										"75a06082-98f4-4763-a57c-e1daf2c16fc1",
+										"37b20eef-9c04-4cbc-946c-8b05a8cd696c"
 									]
 								}
 							},
@@ -400,7 +440,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/employee/3",
+									"raw": "localhost:8080/pep/restaurant/bff/api/employee/3d93e173-7112-40ef-a865-3e70f681acd2",
 									"host": [
 										"localhost"
 									],
@@ -411,7 +451,7 @@
 										"bff",
 										"api",
 										"employee",
-										"3"
+										"3d93e173-7112-40ef-a865-3e70f681acd2"
 									]
 								}
 							},
@@ -434,7 +474,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"role\": \"COOKER\"\r\n}",
+									"raw": "{\r\n    \"role\": \"COOKER\",\r\n    \"schedule\":{\r\n        \"daysScheduleMap\":{\r\n            \"THURSDAY\":[\r\n                {\r\n                    \"startTime\": \"12:00\",\r\n                    \"endTime\": \"14:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"20:00\",\r\n                    \"endTime\": \"23:00\"\r\n                }\r\n            ],\r\n            \"TUESDAY\":[\r\n                {\r\n                    \"startTime\": \"08:00\",\r\n                    \"endTime\": \"12:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"18:00\",\r\n                    \"endTime\": \"22:00\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -475,7 +515,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"role\": \"REIDABOMBA\",\r\n    \"schedule\": {\r\n        \"id\": 1,\r\n        \"type\": \"INTERNSHIP\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"role\": \"REIDABOMBA\",\r\n    \"schedule\":{\r\n        \"daysScheduleMap\":{\r\n            \"THURSDAY\":[\r\n                {\r\n                    \"startTime\": \"12:00\",\r\n                    \"endTime\": \"14:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"20:00\",\r\n                    \"endTime\": \"23:00\"\r\n                }\r\n            ],\r\n            \"TUESDAY\":[\r\n                {\r\n                    \"startTime\": \"08:00\",\r\n                    \"endTime\": \"12:00\"\r\n                },\r\n                {\r\n                    \"startTime\": \"18:00\",\r\n                    \"endTime\": \"22:00\"\r\n                }\r\n            ]\r\n        }\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -483,7 +523,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/employee/5",
+									"raw": "localhost:8080/pep/restaurant/bff/api/employee/37b20eef-9c04-4cbc-946c-8b05a8cd696c",
 									"host": [
 										"localhost"
 									],
@@ -494,7 +534,7 @@
 										"bff",
 										"api",
 										"employee",
-										"5"
+										"37b20eef-9c04-4cbc-946c-8b05a8cd696c"
 									]
 								}
 							},
@@ -522,7 +562,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/employee/1",
+									"raw": "localhost:8080/pep/restaurant/bff/api/employee/d690d0e3-584b-49d4-9896-fad34e616ae0",
 									"host": [
 										"localhost"
 									],
@@ -533,7 +573,7 @@
 										"bff",
 										"api",
 										"employee",
-										"1"
+										"d690d0e3-584b-49d4-9896-fad34e616ae0"
 									]
 								}
 							},
@@ -611,7 +651,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/employee/remove/restaurant/5/1",
+									"raw": "localhost:8080/pep/restaurant/bff/api/employee/remove/restaurant/d690d0e3-584b-49d4-9896-fad34e616ae0/a8e9bac2-30b0-4ee8-94d5-ccfe8e86fdcc/",
 									"host": [
 										"localhost"
 									],
@@ -624,568 +664,9 @@
 										"employee",
 										"remove",
 										"restaurant",
-										"5",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{user_access_token}}",
-								"type": "string"
-							}
-						]
-					},
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "Schedule",
-					"item": [
-						{
-							"name": "Get All Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule/1",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Post Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"type\": \"PARTTIME\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Put Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"type\": \"FULLTIME\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule/2",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule",
-										"2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule/2",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule",
-										"2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Add Employee to Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule/add/employee/3/5",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule",
-										"add",
-										"employee",
-										"3",
-										"5"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Remove Employee to Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/schedule/remove/employee/3/5",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"schedule",
-										"remove",
-										"employee",
-										"3",
-										"5"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{user_access_token}}",
-								"type": "string"
-							}
-						]
-					},
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "Menu",
-					"item": [
-						{
-							"name": "Get All Menu",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"menu"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Menu",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu/0",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"menu",
-										"0"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Post Menu",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"Portuguese\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"menu"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Put Menu",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"tuguês\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu/3",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"menu",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Menu",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8080/pep/restaurant/bff/api/menu/3",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"pep",
-										"restaurant",
-										"bff",
-										"api",
-										"menu",
-										"3"
+										"d690d0e3-584b-49d4-9896-fad34e616ae0",
+										"a8e9bac2-30b0-4ee8-94d5-ccfe8e86fdcc",
+										""
 									]
 								}
 							},
@@ -1423,13 +904,20 @@
 							"name": "Post Restaurant",
 							"request": {
 								"auth": {
-									"type": "noauth"
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{user_access_token}}",
+											"type": "string"
+										}
+									]
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Restaurant TEST\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"id\": 1,\r\n        \"language\": \"Portuguese\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant 1\",\r\n    \"hereId\": \"hereId123\",\r\n    \"location\": {\r\n        \"address\": {\r\n            \"name\": \"Rua Desce e Sobe\",\r\n            \"postalCode\": \"1000-100\" ,\r\n            \"city\": \"porto\",\r\n            \"country\": \"Portugal\"\r\n        },\r\n        \"locationCoordinate\": {\r\n            \"latitude\": 12.4,\r\n            \"longitude\": 12.3\r\n        }\r\n    },\r\n    \"capacity\": 3,\r\n    \"menu\": {\r\n        \"language\": \"English\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1463,7 +951,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Francesinhas à Raul\",\r\n    \"location\": \"Porto\",\r\n    \"capacity\": 2,\r\n    \"menu\": {\r\n        \"id\": 1,\r\n        \"language\": \"Italian\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Restaurant 231111\",\r\n    \"hereId\": \"hereId231111\",\r\n    \"location\": {\r\n        \"address\": {\r\n            \"name\": \"Rua Desce e Sobe231111\",\r\n            \"postalCode\": \"1000-231111\" ,\r\n            \"city\": \"porto231111\",\r\n            \"country\": \"Portugal231111\"\r\n        },\r\n        \"locationCoordinate\": {\r\n            \"latitude\": 12.4231111,\r\n            \"longitude\": 12.3231111\r\n        }\r\n    },\r\n    \"capacity\": 32311111,\r\n    \"menu\": {\r\n        \"language\": \"English2311111\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1471,7 +959,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/1",
+									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/43de4c26-005c-4488-b514-3fafbc706d51",
 									"host": [
 										"localhost"
 									],
@@ -1482,7 +970,7 @@
 										"manager",
 										"api",
 										"restaurant",
-										"1"
+										"43de4c26-005c-4488-b514-3fafbc706d51"
 									]
 								}
 							},
@@ -1503,7 +991,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/2",
+									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/8170d537-852c-453a-9b0e-d2dfc41754b6",
 									"host": [
 										"localhost"
 									],
@@ -1514,7 +1002,7 @@
 										"manager",
 										"api",
 										"restaurant",
-										"2"
+										"8170d537-852c-453a-9b0e-d2dfc41754b6"
 									]
 								}
 							},
@@ -1539,7 +1027,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/add/employee/1/3",
+									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/add/employee/4b85a19c-e9de-4d94-bc60-bd686d6e7394/562c3a12-8dd7-45de-8c38-29a720d1b7cf",
 									"host": [
 										"localhost"
 									],
@@ -1552,8 +1040,8 @@
 										"restaurant",
 										"add",
 										"employee",
-										"1",
-										"3"
+										"4b85a19c-e9de-4d94-bc60-bd686d6e7394",
+										"562c3a12-8dd7-45de-8c38-29a720d1b7cf"
 									]
 								}
 							},
@@ -1578,7 +1066,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/remove/employee/5/1",
+									"raw": "localhost:8082/pep/restaurant/manager/api/restaurant/remove/employee/4b85a19c-e9de-4d94-bc60-bd686d6e7394/b1e68c46-1a31-4bf2-a70b-9c8a419e76bc",
 									"host": [
 										"localhost"
 									],
@@ -1591,8 +1079,8 @@
 										"restaurant",
 										"remove",
 										"employee",
-										"5",
-										"1"
+										"4b85a19c-e9de-4d94-bc60-bd686d6e7394",
+										"b1e68c46-1a31-4bf2-a70b-9c8a419e76bc"
 									]
 								}
 							},
@@ -1679,7 +1167,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/employee/3",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee/92c5b8a2-28c8-44c0-8d81-e2acce4cb816",
 									"host": [
 										"localhost"
 									],
@@ -1690,7 +1178,7 @@
 										"manager",
 										"api",
 										"employee",
-										"3"
+										"92c5b8a2-28c8-44c0-8d81-e2acce4cb816"
 									]
 								}
 							},
@@ -1714,7 +1202,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/api/employee",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee",
 									"host": [
 										"localhost"
 									],
@@ -1723,7 +1211,6 @@
 										"pep",
 										"restaurant",
 										"manager",
-										"api",
 										"api",
 										"employee"
 									]
@@ -1741,7 +1228,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"role\": \"REIDABOMBA\",\r\n    \"schedule\": {\r\n        \"id\": 1,\r\n        \"type\": \"INTERNSHIP\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"role\": \"REIDABOMBA\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1749,7 +1236,7 @@
 									}
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/employee/5",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee/92c5b8a2-28c8-44c0-8d81-e2acce4cb816",
 									"host": [
 										"localhost"
 									],
@@ -1760,7 +1247,7 @@
 										"manager",
 										"api",
 										"employee",
-										"5"
+										"92c5b8a2-28c8-44c0-8d81-e2acce4cb816"
 									]
 								}
 							},
@@ -1781,7 +1268,7 @@
 									}
 								],
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/employee/1",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee/562c3a12-8dd7-45de-8c38-29a720d1b7cf",
 									"host": [
 										"localhost"
 									],
@@ -1792,7 +1279,7 @@
 										"manager",
 										"api",
 										"employee",
-										"1"
+										"562c3a12-8dd7-45de-8c38-29a720d1b7cf"
 									]
 								}
 							},
@@ -1817,7 +1304,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/employee/add/restaurant/5/1",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee/add/restaurant/562c3a12-8dd7-45de-8c38-29a720d1b7cf/8170d537-852c-453a-9b0e-d2dfc41754b6",
 									"host": [
 										"localhost"
 									],
@@ -1830,8 +1317,8 @@
 										"employee",
 										"add",
 										"restaurant",
-										"5",
-										"1"
+										"562c3a12-8dd7-45de-8c38-29a720d1b7cf",
+										"8170d537-852c-453a-9b0e-d2dfc41754b6"
 									]
 								}
 							},
@@ -1856,7 +1343,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/employee/remove/restaurant/5/1",
+									"raw": "localhost:8082/pep/restaurant/manager/api/employee/remove/restaurant/562c3a12-8dd7-45de-8c38-29a720d1b7cf/4b85a19c-e9de-4d94-bc60-bd686d6e7394",
 									"host": [
 										"localhost"
 									],
@@ -1869,491 +1356,8 @@
 										"employee",
 										"remove",
 										"restaurant",
-										"5",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{user_access_token}}",
-								"type": "string"
-							}
-						]
-					},
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "Schedule",
-					"item": [
-						{
-							"name": "Get All Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule/1",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Post Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"type\": \"PARTTIME\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Put Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"type\": \"FULLTIME\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule/2",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule",
-										"2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule/2",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule",
-										"2"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Add Employee to Schedule",
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{user_access_token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule/add/employee/3/5",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule",
-										"add",
-										"employee",
-										"3",
-										"5"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Remove Employee to Schedule",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/schedule/remove/employee/3/5",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"schedule",
-										"remove",
-										"employee",
-										"3",
-										"5"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"auth": {
-						"type": "bearer",
-						"bearer": [
-							{
-								"key": "token",
-								"value": "{{user_access_token}}",
-								"type": "string"
-							}
-						]
-					},
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					]
-				},
-				{
-					"name": "Menu",
-					"item": [
-						{
-							"name": "Get All Menu",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/menu",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"menu"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Menu",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/menu/1",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"menu",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Post Menu",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"Portuguese\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/menu",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"menu"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Put Menu",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"language\": \"tuguês\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/menu/3",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"menu",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Menu",
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "localhost:8082/pep/restaurant/manager/api/menu/3",
-									"host": [
-										"localhost"
-									],
-									"port": "8082",
-									"path": [
-										"pep",
-										"restaurant",
-										"manager",
-										"api",
-										"menu",
-										"3"
+										"562c3a12-8dd7-45de-8c38-29a720d1b7cf",
+										"4b85a19c-e9de-4d94-bc60-bd686d6e7394"
 									]
 								}
 							},
@@ -2434,7 +1438,7 @@
 								},
 								{
 									"key": "client_secret",
-									"value": "c815a87f-9346-48e6-b063-fd97e091d1db",
+									"value": "s6By4IrUabat0HpziFXH5qxCnNZai4Zr",
 									"type": "text"
 								},
 								{
@@ -2486,7 +1490,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://places.ls.hereapi.com/places/v1/discover/here?at=41.1099091417%2C-8.621535675&apiKey=1ej1FNvYZqjc7sb7HgGQd6L4wghicbc1VsITIgUIfwA",
+							"raw": "https://places.ls.hereapi.com/places/v1/discover/here?at=41.1099091417%2C-8.621535675&apiKey=djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8",
 							"protocol": "https",
 							"host": [
 								"places",
@@ -2507,7 +1511,7 @@
 								},
 								{
 									"key": "apiKey",
-									"value": "1ej1FNvYZqjc7sb7HgGQd6L4wghicbc1VsITIgUIfwA"
+									"value": "djKbbBpOEvdl42JSd04LO8-cQRw7w1tPil0MXPc6mW8"
 								}
 							]
 						}
